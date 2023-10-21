@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="meuscript.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title> Java Script</title>
+</head>
+<body>
+  
+    <div class="container"><!-- Div pai onde fica todo o codigo -->
+    <div class="row border"> <!-- Linha 1 row é linha -->
+        <div class="col text-center mt-2 mb-3"> <!-- Uma coluna com texto no centro e margim top 2 e margim baixo 3-->
+            <h1> Java Script 1</h1>
+        </div>
+
+    </div>
+     <div class="row"> <!-- Outra linha-->
+         <div class="col-md-2 border p-2"> <!-- Coluna 1 com md (tamanho 2) e borda -->
+             <h3 class="mb-2"> Indice </h3> 
+             <ul>
+                 <li class="mb-2"> <a href="#getel">getElementByid</a></li>
+                 <li class="mb-2"> <a href="#getvalue"> Capturar valor de elemento</a></li>
+                 <li class="mb-2"> <a href="#editEestilo"> Editando CSS com JS</a></li>
+             </ul>
+         </div>
+         <div class="col-md-10 border"> <!-- Coluna 2 com md-10 e borda ( lembrando que o tamanho é de ate 12)-->
+               <section id="getel" class="p-3 mb-4"> <!-- Sessão 1  de  mostrar data ao passar o mouse em cima do botão--> 
+                     <h3> Exibindo a  Data ao passar o mouse </h3>
+                     <p> Vamos utilizar um metodo Java script getElementByid </p>
+                     <button class="btn btn-primary" onmouseover="exibeData()" onmouseout="removeData()"> Passe o mouse para ver a data </button> <!-- onmouseover para exibir a função exibiData ao passar o mouse em cima-->
+                     <p id="par1"></p>
+               </section>
+               <section id="getvalue" class="p-3 mb-4"> <!-- Sessão 2-->
+                           <h3> Capturar valor de elemento html</h3>
+                           <p id="original"> Este valor será copiado</p> <!-- onclick, ao clicar no botão o  texto será copiado-->
+                           <button class="btn btn-info" onclick="copiarTexto()"> Clique aqui para copiar o texto</button> <!-- btn btn-info comando para estilar botão-->
+                           <h4 id="copia"> </h4>
+                           <h3> Capturar valor de input </h3> <!-- Copia de um dado digitado em um input-->
+                           <label for="nome" class="form-label"> Nome Completo </label>
+                           <input type="text" id="nome" class="form-control"> <!-- entrada de dado do usuario -->
+                           <button class="btn btn-primary mt-4" onclick="copiarInput()"> Copiar texto da input</button> <!-- Ao clicar no botão o dado input será copiado-->
+               </section>
+               <section id="editEestilo"> <!-- Sessão 3-->
+                     <h3> Editando CSS e source com JavaScript</h3>
+                     <button class="btn btn-success" onclick="ligar()"> ON</button> <!--Ao clicar no botão a lampada acende com uma função-->
+                     <img src="apagada.gif" alt="lampada apagada" id="lampada"> <!-- Imagem de lampada apagada-->
+                     <button class="btn btn-danger" onclick="desligar()"> OFF</button> <!-- Ao apertar no botão a lampada apaga-->
+                     <h3> Editando estilo </h3>
+                     <p id="part2">  Este parágrafo terá seu estilo alterado</p>
+                     <button class="btn btn-secondary" onclick="mudarEstilo()"> Mude o estilo do paragrafo</button> <!-- Ao clicar no botão o estilo é alterado-->
+               </section>
+         </div>
+     </div>
+
+    </div>
+
+
+    
+</body>
+</html>
